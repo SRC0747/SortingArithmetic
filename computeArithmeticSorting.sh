@@ -6,3 +6,4 @@ read -p "Enter the value of c:" c
 m=$(($a+($b*$c)))
 n=$((($a*$b)+$c))
 p=$(($c+($a/$b)))
+q=$((($a%$b)+$c))
