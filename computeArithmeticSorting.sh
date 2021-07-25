@@ -31,3 +31,17 @@ do
 done
 echo "${result[@]}"
 
+#Sorting the values in Ascending order
+for (( i=0; i<=3; i++ ))
+do
+        for (( j=$(($i+1)); j<=3; j++ ))
+        do
+                if [ result[$i] -lt result[$j] ]
+                then
+                        temp=$((result[$i]))
+                        result[$i]=$((result[$j]))
+                        result[$j]=$temp
+                fi
+        done
+done
+echo "${result[@]}"
