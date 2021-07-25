@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 echo "Welcome to Arithmetic computation and Sorting problem."
 declare -A arithmetic
 declare -a result
@@ -16,3 +16,18 @@ arithmetic[compute4]="$q"
 echo "${arithmetic[@]}"
 result=${arithmetic[@]}
 echo "${result[@]}"
+#Sorting the values in Descnding order.
+for (( i=0; i<=3; i++ ))
+do
+	for (( j=$(($i+1)); j<=3; j++ ))
+	do
+		if [ result[$i] -lt result[$j] ]
+		then
+			temp=$((result[$i]))
+			result[$i]=$((result[$j]))
+			result[$j]=$temp
+		fi
+	done
+done
+echo "${result[@]}"
+
